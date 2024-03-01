@@ -61,6 +61,27 @@ const WorkplaceDescription = styled.p`
   text-align: center;
 `;
 
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+const LinkTitle = styled.h2`
+  font-size: 20px;
+`;
+
+const Link = styled.a`
+  font-size: 16px;
+  color: white;
+  text-decoration: underline;
+
+  &:hover {
+    color: lightblue;
+  }
+`;
+
 const Profile = () => {
   return (
     <Container>
@@ -72,6 +93,17 @@ const Profile = () => {
       <WorkplaceDescription>Accenture - Desenvolvedor iOS</WorkplaceDescription>
       <SubName>Descrição</SubName>
       <Description>Desenvolvedor de Software iOS e atualmente cursando MBA em Mobile Development Sou um desenvolvedor de software iOS com experiência profissional em grandes consultorias, especialmente no setor bancário. Atualmente, estou cursando MBA em Desenvolvimento Mobile para aprimorar ainda mais minhas habilidades e conhecimentos em minha área de especialização. Minha carreira se destaca pela colaboração em projetos desafiadores para grandes bancos, inclusive fora do Brasil. Além disso, tenho a oportunidade de aplicar minha experiência trabalhando na maior empresa de consultoria do mundo.</Description>
+
+      {/* Adicionando os links */}
+      <LinkContainer>
+        <LinkTitle>LinkedIn:</LinkTitle>
+        <Link href="https://www.linkedin.com/in/bruno-vieira-a1264b16b/" target="_blank" rel="noopener noreferrer">Clique aqui para visitar meu LinkedIn</Link>
+      </LinkContainer>
+
+      <LinkContainer>
+        <LinkTitle>GitHub:</LinkTitle>
+        <Link href="https://github.com/BrunoVieiraSouza" target="_blank" rel="noopener noreferrer">Clique aqui para visitar meu GitHub</Link>
+      </LinkContainer>
     </Container>
   );
 };
